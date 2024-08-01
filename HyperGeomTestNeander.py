@@ -4,12 +4,12 @@
 
 ###Purpose###
 #To investigate whether Neanderthal SNPs are enriched in the selected GWA studies. 
-#The merged data sets will be read in and manually changed each time due to computational limitations.
+#The merged data sets will be read and manually changed each time due to computational limitations.
 #The below script is a template for how you could similarly perform this analysis
 
 import pandas as pd
 
-merged_data = pd.read_csv("IS_Neander.tsv", sep = "\t")
+merged_data = pd.read_csv("[Your trait dataset]", sep = "\t")
 print(merged_data.columns.values.tolist())
 
 #  Function to align alleles, as the intogressed allele must align to the effect allele in the GWAS
@@ -36,7 +36,7 @@ significant_neanderthal_snps = len(significant_snps)
 total_snps_in_gwas = 7048241
 
 # Total significant SNPs in GWAS dataset
-total_significant_snps_in_gwas = 326
+total_significant_snps_in_gwas = 326 # As determined from the transformation of Z-scores from mungesumstats.py back to p-values.
 
 # Perform Hypergeometric Test
 import numpy as np
@@ -53,7 +53,7 @@ p_value = hypergeom.sf(x-1, M, n, N)
 
 #expected value and variance
 expected_value = (n * N) / M # Expected number of significant Neanderthal SNPs given the number of Neanderthal SNPs (n)
-# by the total signfiicant SNPs in the GWAS dataset (M).
+# by the total significant SNPs in the GWAS dataset (M).
 variance = (n * N * (M - n) * (M - N)) / (M**2 * (M - 1)) 
 
 #Z-score
