@@ -34,6 +34,6 @@ MergingGWASData.py created a dataframe of overlapping likely Neanderthal SNPs an
 HyperGeomTestNeander.py was used to perform a hypergeometric test between likely archaic Neanderthal SNPs and outcome trait GWA studies.
 
 ### Results
-Can be found here: https://github.com/OwenJ4/NeanderthalEnrichmentAnalysis/main/Results.md
+Results can be found here: https://github.com/OwenJ4/NeanderthalEnrichmentAnalysis/blobl/main/Results.md (best viewed in code mode)
 
 
