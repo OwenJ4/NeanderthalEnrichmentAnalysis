@@ -33,3 +33,7 @@ FormattingScriptPart2.py was used to find introgressed Neanderthal alleles in th
 MergingGWASData.py created a dataframe of overlapping likely Neanderthal SNPs and trait SNPs.
 HyperGeomTestNeander.py was used to perform a hypergeometric test between likely archaic Neanderthal SNPs and outcome trait GWA studies.
 
+### Results
+Can be found here: https://github.com/OwenJ4/NeanderthalEnrichmentAnalysis/main/Results.md
+
+
