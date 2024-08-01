@@ -1,4 +1,4 @@
-#Python script to clean and format probable neanderthal SNPs
+#Python script to clean and format probable Neanderthal SNPs
 #Author: Owen Jones
 #Date: 01/07/2024
 
@@ -21,8 +21,8 @@ mergedDF = mergedDF.rename(columns={'POS_x': 'POS'})
 print(mergedDF)
 
 #Reading a DF with an additional allele column which indicates which allele was likely from 
-#Neanderthals for next steps of the analysis pipeline which requires the GWAS ALT 
-#alleles be aligned to the suspected neanderthal allele.
+#Neanderthals for the next steps of the analysis pipeline which requires the GWAS ALT 
+#alleles be aligned to the suspected Neanderthal allele.
 NeanderAllelesDF = pd.read_csv("Neanderthal study - Neanderthal_Alleles.tsv", sep = "\t")
 print(NeanderAllelesDF)
 
