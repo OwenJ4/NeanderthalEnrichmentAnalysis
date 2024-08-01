@@ -1,14 +1,14 @@
-#Python script to clean and format probable intogressed neanderthal SNPs
+#Python script to clean and format probable neanderthal SNPs
 #Author: Owen Jones
 #Date: 01/07/2024
 
 ##Purpose##
 #This script was created to clean and format the 
-# probable archaic intogressed SNPs found by Dannerman and Kelso (2017)
+# probable archaic  SNPs found by Dannerman and Kelso (2017)
 # The aims are to (1) match the CHR and POS and REF 
 # and ALT alleles to the rsids in a Kaviar output.
-# (2) Then to include indentified archiac Neanderthal alleles 
-# as a seperate column, as these include REF and ALT alleles.
+# (2) Then to include identified archaic introgressed Neanderthal alleles 
+# as a separate column, as these include REF and ALT alleles.
 
 import pandas as pd
 import numpy as np
@@ -21,7 +21,7 @@ mergedDF = mergedDF.rename(columns={'POS_x': 'POS'})
 print(mergedDF)
 
 #Reading a DF with an additional allele column which indicates which allele was likely from 
-#Neanderthals for next steps of analysis pipeline which requires the GWAS ALT 
+#Neanderthals for next steps of the analysis pipeline which requires the GWAS ALT 
 #alleles be aligned to the suspected neanderthal allele.
 NeanderAllelesDF = pd.read_csv("Neanderthal study - Neanderthal_Alleles.tsv", sep = "\t")
 print(NeanderAllelesDF)
