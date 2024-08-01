@@ -10,7 +10,7 @@ import pandas as pd
 import scipy.stats #To calculate P-value from Z-score
 
 # Load GWAS summary statistics
-gwas_data = pd.read_csv("MungedIS_GWAS.txt.sumstats", sep = "\t")
+gwas_data = pd.read_csv("[Your munged trait data]", sep = "\t") #e.g. the output from mungesumstats could be [trait name].tsv.sumstats
 print(len(gwas_data)) # len of GWAS data: 
 gwas_data = gwas_data.drop(columns=['P'])
 gwas_data['P'] = ''
