@@ -27,3 +27,9 @@ Cardio-Metabolic Disease Traits
 Mungesumstats.py was used for data cleaning/formatting from LDSC (https://github.com/bulik/ldsc)
 
 
+### Brief code descriptions
+FormattingScriptPart1.py was used to clean and format the Neanderthal data, including a SNP column.
+FormattingScriptPart2.py was used to find introgressed Neanderthal alleles in the REF and ALT columns to create a new Neanderthal allele column.
+MergingGWASData.py created a dataframe of overlapping likely Neanderthal SNPs and trait SNPs.
+HyperGeomTestNeander.py was used to perform a hypergeometric test between likely archaic Neanderthal SNPs and outcome trait GWA studies.
+
