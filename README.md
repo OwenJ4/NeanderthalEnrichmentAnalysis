@@ -35,5 +35,5 @@ HyperGeomTestNeander.py was used to perform a hypergeometric test between likely
 
 ### Results
 Results can be found here: https://github.com/OwenJ4/NeanderthalEnrichmentAnalysis/blobl/main/Results.md (best viewed in code mode)
-
+No results from the hypergeometric tests were significant.
 
