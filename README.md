@@ -8,7 +8,7 @@ Neanderthal SNPs	https://www.cell.com/ajhg/fulltext/S0002-9297(17)30379-8	NA	621
 Neurological Disease Traits
 
 35379992_Bellenguez_AD	https://www.ebi.ac.uk/gwas/publications/35379992	6809862	5004	OR	
-24076602_Beecham_MS		134209	3327	OR	
+24076602_Beecham_MS https://www.ebi.ac.uk/gwas/publications/24076602 134209	3327	OR	
 31701892_Nalls_PD	https://www.ebi.ac.uk/gwas/studies/GCST009325	6149662	2976	BETA	Cases included diagnosed PD and those with a first-degree relative with PD
 
 Psychiatric Disorder Traits					
