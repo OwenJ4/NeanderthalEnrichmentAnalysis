@@ -1,14 +1,14 @@
-#Python script to clean and format probable intogressed neanderthal SNPs
+#Python script to clean and format probable Neanderthal SNPs
 #Author: Owen Jones
 #Date: 27/06/2024
 
 ##Purpose##
 #This script was created to clean and format the 
-# probable archaic intogressed SNPs found by Dannerman and Kelso (2017)
+# probable archaic SNPs found by Dannerman and Kelso (2017)
 # The aims are to (1) match the CHR and POS and REF 
 # and ALT alleles to the rsids in a Kaviar output.
-# (2) Then to include indentified archiac Neanderthal alleles 
-# as a seperate column, as these include REF and ALT alleles.
+# (2) Then to include identified archaic introgressed Neanderthal alleles 
+# as a separate column, as these include REF and ALT alleles.
 
 import pandas as pd
 import numpy as np
@@ -27,15 +27,15 @@ KaviarDF['CHR_POS'] = ''
 #Converting POS float data type to int for the concatenate_columns function
 KaviarDF['POS'] = KaviarDF['POS'].astype('Int64')
 
-def concatenate_columns(row): #A function to concatonate SNP coordinates in order to match NeanderDF
+def concatenate_columns(row): #A function to concatenate SNP coordinates in order to match NeanderDF
    return str(row['#CHROM']) + ':' + str(row['POS'])
 
 KaviarDF['CHR_POS'] = KaviarDF.apply(concatenate_columns, axis=1)
 #print(KaviarDF) # Output was as expected
 
 #Kaviar Output is longer than Dannerman and Kelso (2017) study results due to multiple SNPs being associated with the same CHR/POS
-#A solutionto ensure quality of the merged dataframe is to align the REF and ALT alleles 
-#so that they match to the corresponding SNP found by Kaviar, and the direction of effect preserved.
+#A solution to ensure quality of the merged dataframe is to align the REF and ALT alleles 
+#so that they match the corresponding SNP found by Kaviar, and the direction of effect preserved.
 
 #To ensure allele alignment, dataframes need to be merged where alleles match ref and effect allele, and CHR_POS
 merged_df = NeanderDF.merge(KaviarDF, how='inner', on=['CHR_POS', 'REF', 'ALT'])
